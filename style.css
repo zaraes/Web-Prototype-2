@@ -1,0 +1,196 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Nav Nav Nav Nav Nav Nav"
+    "Display-Image Display-Image Display-Image Display-Image Display-Image Display-Image"
+    "Section-1 Section-1 Section-1 Section-1 Section-1 Section-1"
+    "Section-2 Section-2 Section-2 Section-2 Section-2 Section-2"
+    "Section-3 Section-3 Section-3 Section-3 Section-3 Section-3"
+    "Section-4 Section-4 Section-4 Section-4 Section-4 Section-4"
+    "Section-5 Section-5 Section-5 Section-5 Section-5 Section-5"
+    ". . . . . .";
+}
+
+.Nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Logo Phone-number Phone-number Phone-number . . ."
+    "Logo Report-Button CampaignsButton Volunteer-Button . contact-Button donate-Button";
+    /* "stroke stroke stroke stroke" */
+  grid-area: Nav;
+}
+
+.Logo { 
+  grid-area: Logo;
+  background-color: black;
+}
+
+.Phone-number { 
+  grid-area: Phone-number; 
+  background-color: grey;
+}
+
+.Report-Button { 
+  grid-area: Report-Button;
+  background-color: purple;
+}
+
+.CampaignsButton { 
+  grid-area: CampaignsButton;
+  background-color: red;
+}
+
+.Volunteer-Button { 
+  grid-area: Volunteer-Button;
+  background-color: yellow; 
+}
+
+.contact-Button { 
+  grid-area: contact-Button;
+  background-color: pink; 
+}
+
+.donate-Button { 
+  grid-area: donate-Button;
+  background-color:  blue; 
+}
+
+.Display-Image {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Image1 Text Image2"
+    "Image1 Text Image2"
+    "Image1 Text Image2";
+  grid-area: Display-Image;
+}
+
+.Image1 { grid-area: Image1; }
+
+.Text { grid-area: Text; }
+
+.Image2 { grid-area: Image2; }
+
+.Section-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Who-we-are Who-we-are Who-we-are Title Title"
+    "Who-we-are-text Who-we-are-text Who-we-are-text Donation-bubbles Donation-bubbles"
+    "Who-we-are-text Who-we-are-text Who-we-are-text Donation-bubbles Donation-bubbles"
+    "Who-we-are-text Who-we-are-text Who-we-are-text Donate-Button2 Donate-Button2"
+    "Picture3 Picture2 Picture1 Donation-text Donation-text";
+  grid-area: Section-1;
+}
+
+.Who-we-are { grid-area: Who-we-are; }
+
+.Title { grid-area: Title; }
+
+.Donation-bubbles { grid-area: Donation-bubbles; }
+
+.Donate-Button2 { grid-area: Donate-Button2; }
+
+.Donation-text { grid-area: Donation-text; }
+
+.Who-we-are-text { grid-area: Who-we-are-text; }
+
+.Picture1 { grid-area: Picture1; }
+
+.Picture2 { grid-area: Picture2; }
+
+.Picture3 { grid-area: Picture3; }
+
+.Section-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Rescue-Log Rescue-Log Rescue-Log"
+    "Log1 Log2 Log3"
+    "Log1Text Log2Text Log3Text";
+  grid-area: Section-2;
+}
+
+.Rescue-Log { grid-area: Rescue-Log; }
+
+.Log1 { grid-area: Log1; }
+
+.Log2 { grid-area: Log2; }
+
+.Log3 { grid-area: Log3; }
+
+.Log1Text { grid-area: Log1Text; }
+
+.Log2Text { grid-area: Log2Text; }
+
+.Log3Text { grid-area: Log3Text; }
+
+.Section-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Report-an-Injured-Animal Report-an-Injured-Animal Report-an-Injured-Animal"
+    "ReportText ReportText Image"
+    "ReportText ReportText Image";
+  grid-area: Section-3;
+}
+
+.Report-an-Injured-Animal { grid-area: Report-an-Injured-Animal; }
+
+.ReportText { grid-area: ReportText; }
+
+.Image { grid-area: Image; }
+
+.Section-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Our-Campaigns Our-Campaigns Our-Campaigns"
+    "Campaign-Image Campaign-Text Campaign-Text"
+    "Campaign-Image Campaign-Text Campaign-Text";
+  grid-area: Section-4;
+}
+
+.Our-Campaigns { grid-area: Our-Campaigns; }
+
+.Campaign-Image { grid-area: Campaign-Image; }
+
+.Campaign-Text { grid-area: Campaign-Text; }
+
+.Section-5 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Volunteer-Title Volunteer-Title Volunteer-Title"
+    "Become-Volunteer . Become-Carer"
+    "Volunteer-Image . Volunteer-Image2";
+  grid-area: Section-5;
+}
+
+.Volunteer-Title { grid-area: Volunteer-Title; }
+
+.Become-Volunteer { grid-area: Become-Volunteer; }
+
+.Become-Carer { grid-area: Become-Carer; }
+
+.Volunteer-Image { grid-area: Volunteer-Image; }
+
+.Volunteer-Image2 { grid-area: Volunteer-Image2; }
