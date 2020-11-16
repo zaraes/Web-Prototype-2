@@ -13,54 +13,119 @@
     "Section-5 Section-5 Section-5 Section-5 Section-5 Section-5"
     ". . . . . .";
 }
-
+/* Nav elements */
 .Nav {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  grid-template-rows: 0.4fr 0.2fr 3px;
   gap: 0px 0px;
   grid-template-areas:
     "Logo Phone-number Phone-number Phone-number . . ."
-    "Logo Report-Button CampaignsButton Volunteer-Button . contact-Button donate-Button";
-    /* "stroke stroke stroke stroke" */
+    "Logo Report-Button CampaignsButton Volunteer-Button . contact-Button donate-Button"
+    "stroke stroke stroke stroke stroke stroke stroke";
   grid-area: Nav;
 }
 
 .Logo { 
   grid-area: Logo;
-  background-color: black;
+  /* background-color: purple; */
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Logo img{
+  /* background-color:bisque; */
+  width: 8em;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .Phone-number { 
   grid-area: Phone-number; 
-  background-color: grey;
+  /* background-color: grey; */
 }
 
 .Report-Button { 
   grid-area: Report-Button;
-  background-color: purple;
+  /* background-color: purple; */
+}
+
+.Report-Button button {
+  background-color: #495867;
+  border: none;
+  padding: 8px 8px;
+  text-align: center;
+  border-radius: 25px;
+  color: white;
 }
 
 .CampaignsButton { 
   grid-area: CampaignsButton;
-  background-color: red;
+  /* background-color: red; */
+}
+
+.CampaignsButton button {
+  background-color: #495867;
+  border: none;
+  padding: 8px 8px;
+  text-align: center;
+  border-radius: 25px;
+  color: white;
 }
 
 .Volunteer-Button { 
   grid-area: Volunteer-Button;
-  background-color: yellow; 
+  /* background-color: yellow;  */
+}
+
+.Volunteer-Button button {
+  background-color: #495867;
+  border: none;
+  padding: 8px 8px;
+  text-align: center;
+  border-radius: 25px;
+  color: white;
 }
 
 .contact-Button { 
   grid-area: contact-Button;
-  background-color: pink; 
+  /* background-color: pink;  */
+}
+
+.contact-Button button {
+  background-color: #495867;
+  border: none;
+  padding: 8px 8px;
+  text-align: center;
+  border-radius: 25px;
+  color: white;
 }
 
 .donate-Button { 
   grid-area: donate-Button;
-  background-color:  blue; 
+  /* background-color:  blue;  */
 }
 
+.donate-Button button {
+  background-color: #CE796B;
+  border: none;
+  padding: 8px 8px;
+  text-align: center;
+  border-radius: 25px;
+  color: white;
+}
+
+/* Stroke */
+.stroke {
+  grid-area: stroke;
+  background-color: black;
+}
+
+/* DisplayImage */
 .Display-Image {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -73,11 +138,48 @@
   grid-area: Display-Image;
 }
 
-.Image1 { grid-area: Image1; }
+.Image1 { 
+  grid-area: Image1;
+  background-color: beige;
+  padding:0em;
+}
 
-.Text { grid-area: Text; }
+.Image1:first-child {
+  width: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-.Image2 { grid-area: Image2; }
+.Text { 
+  grid-area: Text;
+  position:relative;
+  background-color: blue;
+  padding: 0em;
+  
+}
+
+.Text > p {
+  text-align: center; 
+  font-size: 200%;
+  background-color: pink;
+  position:relative;
+}
+
+.Image2 { 
+  grid-area: Image2;
+  background-color:azure;
+  padding: 0em;
+}
+
+.Image2:first-child {
+  width: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .Section-1 {
   display: grid;
