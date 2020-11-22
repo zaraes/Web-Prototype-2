@@ -17,7 +17,7 @@
 .Nav {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto;
-  grid-template-rows: 1fr 0.6fr 3px;
+  grid-template-rows: 1fr 0.6fr 1fr;
   gap: 0px 0px;
   grid-template-areas:
     "Logo Phone-number Phone-number Phone-number . . ."
@@ -129,7 +129,7 @@
 .Display-Image {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
+  grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-template-areas:
     "Image1 Text Image2";
@@ -230,48 +230,41 @@
     "bubble1 bubble2 bubble3"
     "bubble1 bubble2 bubble3";
   grid-area: Donation-bubbles;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  background-color:aqua;
+  /* background-color:aqua; */
 }
 
 .bubble1 { 
   grid-area: bubble1; 
-  background-color: white;
-  width: 70%;
-  height: 80%;
-  border-radius: 25px;
-  padding: 1em;
-  margin: 0 auto;
-  display: block;
 }
 
 .bubble2 { 
   grid-area: bubble2; 
-  background-color: white;
-  width: 70%;
-  height: 80%;
-  border-radius: 25px;
-  padding: 1em;
-  margin: 0 auto;
-  display: block;
 }
 
 .bubble3 { 
   grid-area: bubble3; 
+}
+
+.bubble1, .bubble2, .bubble3 {
   background-color: white;
   width: 70%;
   height: 80%;
   border-radius: 25px;
-  padding: 1em;
-  margin: 0 auto;
-  display: block;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center; 
+  display: inline-block;
 }
 
 
 .bubble1, .bubble2, .bubble3 p{
-  font-size: 25%;
-  text-align: center; 
+  font-size: 80%;
 }
 
 .Donate-Button2 { 
@@ -628,6 +621,129 @@
 .Volunteer-Image2 img {
   width:100%;
   border-radius: 25px;
+}
+
+@media screen and (max-width: 661px) {
+  .Nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto, auto, 50px 50px;
+    gap: 0px 0px;
+    grid-template-areas:
+      "Logo Phone-number Phone-number Phone-number"
+      "Report-Button Report-Button CampaignsButton CampaignsButton"
+      "Volunteer-Button Volunteer-Button contact-Button donate-Button"
+      "stroke stroke stroke stroke";
+    grid-area: Nav;
+    background-color:red;
+
+  }
+
+.Logo { 
+  grid-area: Logo;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Logo img{
+  background-color:bisque;
+  width: 2em;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+
+.Phone-number { 
+  text-align: center;
+  grid-area: Phone-number; 
+  background-color: grey;
+}
+
+.Report-Button { 
+  grid-area: Report-Button;
+  background-color: purple;
+}
+
+.Report-Button button {
+  background-color: #495867;
+  border: none;
+  padding: 8px 8px;
+  margin-left: 1em;
+  margin-right: 1em;
+  border-radius: 25px;
+  color: white;
+}
+
+.CampaignsButton { 
+  grid-area: CampaignsButton;
+  background-color: pink;
+}
+
+.CampaignsButton button {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.Volunteer-Button { 
+  background-color: yellow; 
+}
+
+.Volunteer-Button button {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.contact-Button { 
+  background-color: orange; 
+}
+
+.contact-Button button {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.donate-Button { 
+  background-color:  blue; 
+}
+
+.donate-Button button {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+    
+
+
+
+
+
+  .Section-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "Who-we-are"
+      "Who-we-are-text"
+      "Title"
+      "Donation-bubbles"
+      "Donation-bubbles"
+      "Donate-Button2"
+      "Donation-text";
+    grid-area: Section-1;
+  }
+  .Picture1 { 
+    display: none;
+  }
+  .Picture2 { 
+    display: none;
+  }
+  .Picture3 { 
+    display: none;
+  }
 }
 
 
