@@ -968,14 +968,30 @@ ul {
 
 .grid-container-volunteer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
   gap: 0px 0px;
   grid-template-areas:
-    "Nav   Nav"
+    "Nav"
+    "Volunteer-Info";
+}
+
+.Volunteer-Info {
+  display: grid;
+  grid-area: Volunteer-Info;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  gap: 0px 0px;
+  grid-template-areas:
     "Volunteer-Title  Volunteer-Title "
     "Rescuer-Title    Carer-Title     "
     "Rescuer          Carer           ";
+}
+
+
+.Volunteer-Info p {
+  margin-left: 3em;
+  margin-right: 3em;
 }
 
 .Volunteer-Title {
@@ -983,10 +999,14 @@ ul {
 }
 
 .Rescuer-Title {
+  background-color:aquamarine;
+  text-align: center;
   grid-area: Rescuer-Title;
 }
 
 .Carer-Title {
+  background-color:aliceblue;
+  text-align: center;
   grid-area: Carer-Title;
 }
 
@@ -997,12 +1017,6 @@ ul {
 .Carer {
   grid-area: Carer;
 }
-
-
-
-
-
-
 
 
 
@@ -1316,8 +1330,6 @@ ul {
   /* ________________________________________________________________________________ */
 
 
-
-
   .Campaigns-Title {
     text-align: center;
     margin: 0em;
@@ -1328,4 +1340,26 @@ ul {
     display: block;
     text-align: center;
   }
+
+
+  /* ________________________________________________________________________________ */
+
+  /* page4 */
+
+  /* ________________________________________________________________________________ */
+
+
+  .Volunteer-Info {
+    display: block;
+  }
+
+
+ 
+
+
+
+
+
+
+
 }
