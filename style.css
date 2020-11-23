@@ -1,3 +1,9 @@
+/* ________________________________________________________________________________ */
+
+/* Page1 */
+
+/* ________________________________________________________________________________ */
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -13,15 +19,42 @@
     "Section-5 Section-5 Section-5 Section-5 Section-5 Section-5"
     ". . . . . .";
 }
-/* Nav elements */
+
+
+/* ________________________________________________________________________________ */
+
+/* Nav Elements */
+
+/* ________________________________________________________________________________ */
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+ text-decoration: none;
+ color: white;
+}
+
+a:active {
+  text-decoration: none;
+  color: white;
+}
+
 .Nav {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto;
-  grid-template-rows: 1fr 0.6fr 1fr;
+  grid-template-rows: 1fr 0.6fr 0.5fr 3px;
   gap: 0px 0px;
   grid-template-areas:
     "Logo Phone-number Phone-number Phone-number . . ."
     "Logo Report-Button CampaignsButton Volunteer-Button . contact-Button donate-Button"
+    "empty empty empty empty empty empty empty"
     "stroke stroke stroke stroke stroke stroke stroke";
   grid-area: Nav;
 }
@@ -32,6 +65,13 @@
   margin-bottom: auto;
   margin-left: auto;
   margin-right: auto;
+}
+
+.Logo button {
+  background: transparent;
+  box-shadow: 0px 0px 0px transparent;
+  border: 0px solid transparent;
+  text-shadow: 0px 0px 0px transparent;
 }
 
 .Logo img{
@@ -46,7 +86,11 @@
 
 .Phone-number { 
   grid-area: Phone-number; 
-  /* background-color: grey; */
+}
+
+.Phone-number p { 
+  grid-area: Phone-number; 
+  color:black;
 }
 
 .Report-Button { 
@@ -125,7 +169,11 @@
   background-color: black;
 }
 
-/* DisplayImage */
+/* ________________________________________________________________________________ */
+
+/* Display Image */
+
+/* ________________________________________________________________________________ */
 .Display-Image {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -134,6 +182,7 @@
   grid-template-areas:
     "Image1 Text Image2";
   grid-area: Display-Image;
+  margin: 3em;
 }
 
 .Image1 { 
@@ -161,9 +210,8 @@
   
 }
 
-.Text > p {
+.Text > h1 {
   text-align: center; 
-  font-size: 200%;
   /* background-color: pink; */
   /* position:relative; */
 }
@@ -183,7 +231,15 @@
   margin-right: auto;
 }
 
-/* Section 1 */
+
+
+
+
+/* ________________________________________________________________________________ */
+
+/* Section1 */
+
+/* ________________________________________________________________________________ */
 .Section-1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -204,9 +260,8 @@
   /* background-color:aqua; */
 }
 
-.Who-we-are p {
+.Who-we-are h2 {
   text-align: center; 
-  font-size: 200%;
   /* background-color:blue; */
 }
 
@@ -215,9 +270,8 @@
   /* background-color:coral; */
 }
 
-.Title p {
+.Title h2 {
   text-align: center; 
-  font-size: 200%;
   /* background-color:rgb(0, 255, 64); */
 }
 
@@ -347,7 +401,11 @@
   /* background-color: red; */
 }
 
-/* Section 2 */
+/* ________________________________________________________________________________ */
+
+/* Section2 */
+
+/* ________________________________________________________________________________ */
 .Section-2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -363,12 +421,11 @@
 .Rescue-Log { 
   grid-area: Rescue-Log; 
   text-align: center;
-  font-size: 200%;
 }
 
 /* .Rescue-Log p {
   /* background-color: purple; */
-/* } */ */
+/* } */ 
 
 .Log1 { 
   grid-area: Log1; 
@@ -438,7 +495,11 @@
 }
 
 
-/* Section 3 */
+/* ________________________________________________________________________________ */
+
+/* Section3 */
+
+/* ________________________________________________________________________________ */
 .Section-3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -476,9 +537,9 @@
   padding: 1em;
 }
 
-.ReportText p {
+/* .ReportText p {
   /* background-color:darkgreen; */
-}
+
 
 .Image { 
   grid-area: Image; 
@@ -492,7 +553,11 @@
 }
 
 
-/* section4 */
+/* ________________________________________________________________________________ */
+
+/* Section4 */
+
+/* ________________________________________________________________________________ */
 .Section-4 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -538,7 +603,11 @@
   padding: 1em; 
 }
 
+/* ________________________________________________________________________________ */
 
+/* Section5 */
+
+/* ________________________________________________________________________________ */
 .Section-5 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -623,107 +692,443 @@
   border-radius: 25px;
 }
 
-@media screen and (max-width: 661px) {
+
+
+/* ________________________________________________________________________________ */
+
+/* Page2 */
+
+/* ________________________________________________________________________________ */
+
+.grid-container-report-rescue {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Nav   Nav   Nav   Nav   Nav   Nav"
+    "Info  Info  Info  Info  Info  Info"
+    "Form  Form  Form  Form  Form  Form";
+}
+
+/* ________________________________________________________________________________ */
+
+/* Info */
+
+/* ________________________________________________________________________________ */
+.Info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.5fr;
+  grid-template-rows: auto auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Info-Title  Info-Title  Info-blank"
+    "Info-text   Info-text   Info-blank";
+  grid-area: Info;
+  background-color: #ECC8AF;
+}
+
+.Info-Title {
+  grid-area: Info-Title;
+  /* background-color:aqua; */
+  padding: 1em;
+  margin-left: 2em;
+}
+
+.Info-text {
+  grid-area: Info-text;
+  /* background-color:aquamarine; */
+  padding: 1em;
+  margin-left: 2em;
+}
+
+/* ________________________________________________________________________________ */
+
+/* Form */
+
+/* ________________________________________________________________________________ */
+.Form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  gap: 0px 0px;
+  grid-template-areas:
+  "Form-Title         Form-Title        Form-Title        Form-Title"
+  "Form-Details       Form-Details      Form-Animal       Form-Animal"
+  "Form-Details-Box   Form-Details-Box  Form-Animal-Box   Form-Animal-Box"
+  "Form-Location      Form-Location     Form-Animal-Box   Form-Animal-Box"
+  "Form-Location-Box  Form-Location-Box Form-Animal-Box   Form-Animal-Box";
+  grid-area: Form;
+  /* margin: 2em; */
+  background-color:aliceblue;
+  
+}
+
+
+label {
+  display: inline-block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  width: 140px;
+}
+
+input {
+  width: 50%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-top: auto;
+  padding-right: auto;
+  border-radius: 10px;
+  border: 1px solid;
+  border-color: rgb(185, 185, 185);
+  background-color: #E5E5E5;
+  box-shadow: 5px 5px 2px rgb(185, 185, 185) inset;
+  resize: vertical;
+}
+
+.Form li {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+.Form-Title {
+  grid-area: Form-Title;
+  text-align: center;
+  background-color:coral;
+}
+
+.Form-Details {
+  grid-area: Form-Details;
+  background-color:red;
+}
+
+
+.Form-Details-Box {
+  grid-area: Form-Details-Box;
+  /* background-color:violet; */
+}
+
+.Form-Location {
+  grid-area: Form-Location;
+  background-color:pink;
+}
+
+
+.Form-Location-Box {
+  grid-area: Form-Location-Box;
+  /* background-color:orange; */
+}
+
+.Form-Animal {
+  grid-area: Form-Animal;
+  background-color: greenyellow;
+}
+
+
+.Form-Animal-Box {
+  grid-area: Form-Animal-Box;
+  /* background-color:lightblue; */
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ________________________________________________________________________________ */
+
+/* Page 3 */
+
+/* ________________________________________________________________________________ */
+
+
+.grid-container-campaigns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Nav   Nav   Nav   Nav   Nav   Nav"
+    "Campaigns-Title  Campaigns-Title  Campaigns-Title  Campaigns-Title  Campaigns-Title  Campaigns-Title"
+    "Campaigns-Block  Campaigns-Block  Campaigns-Block  Campaigns-Block  Campaigns-Block  Campaigns-Block";
+}
+
+.Campaigns-Title {
+  grid-area: Campaigns-Title;
+  margin-left: 3em;
+  /* background-color:antiquewhite; */
+}
+
+.Campaigns-Block {
+  display: grid;
+  grid-area: Campaigns-Block;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Landcare-Title   Wildlife-Title   AWC-Title"
+    "Landcare         Wildlife         AWC"
+    "Currumbin-Title  AussieArk-Title  Water4Wild-Title"
+    "Currumbin        AussieArk        Water4Wild";
+  /* background-color:azure; */
+}
+
+.Campaigns-Block p {
+  margin-left: 2em;
+  margin-right: 2em;
+  text-overflow: ellipsis;
+}
+
+.Landcare, .Wildlife, .AWC, .Currumbin, .AussieArk, .Water4Wild {
+  width: 70%;
+  height: 80%;
+  border-radius: 25px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: 4em;
+  display: inline-block;
+  /* overflow:hidden;
+  text-overflow:scroll; */
+}
+
+.Landcare-Title {
+  text-align: center;
+  grid-area: Landcare-Title;
+}
+
+.Landcare {
+  background-color: #E7AD99;
+  grid-area: Landcare;
+}
+
+.Wildlife-Title {
+  text-align: center;
+  grid-area: Wildlife-Title;
+}
+
+.Wildlife {
+  background-color: #ECC8AF;
+  grid-area: Wildlife;
+}
+
+.AWC-Title {
+  text-align: center;
+  grid-area: AWC-Title;
+}
+
+.AWC {
+  background-color: #E7AD99;
+  grid-area: AWC;
+}
+
+.Currumbin-Title {
+  text-align: center;
+  grid-area: Currumbin-Title;
+}
+
+.Currumbin {
+  background-color: #ECC8AF;
+  grid-area: Currumbin;
+}
+
+.AussieArk-Title {
+  text-align: center;
+  grid-area: AussieArk-Title;
+}
+
+.AussieArk {
+  background-color: #E7AD99;
+  grid-area: AussieArk;
+}
+
+.Water4Wild-Title {
+  text-align: center;
+  grid-area: Water4Wild-Title;
+}
+
+.Water4Wild {
+  background-color: #ECC8AF;
+  grid-area: Water4Wild;
+}
+
+/* ________________________________________________________________________________ */
+
+/* Page 4 */
+
+/* ________________________________________________________________________________ */
+
+
+.grid-container-volunteer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Nav   Nav"
+    "Volunteer-Title  Volunteer-Title "
+    "Rescuer-Title    Carer-Title     "
+    "Rescuer          Carer           ";
+}
+
+.Volunteer-Title {
+  grid-area: Volunteer-Title;
+}
+
+.Rescuer-Title {
+  grid-area: Rescuer-Title;
+}
+
+.Carer-Title {
+  grid-area: Carer-Title;
+}
+
+.Rescuer {
+  grid-area: Rescuer;
+}
+
+.Carer {
+  grid-area: Carer;
+}
+
+
+
+
+
+
+
+
+
+
+/* ________________________________________________________________________________ */
+
+/* Media Queries */
+
+/* ________________________________________________________________________________ */
+
+
+/* 661 */
+@media screen and (max-width: 1025px) {
+
+/* ________________________________________________________________________________ */
+
+/* page1 */
+
+/* ________________________________________________________________________________ */
   .Nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto, auto, 50px 50px;
+    grid-template-rows: auto, auto, auto 3px;
     gap: 0px 0px;
     grid-template-areas:
-      "Logo Phone-number Phone-number Phone-number"
-      "Report-Button Report-Button CampaignsButton CampaignsButton"
-      "Volunteer-Button Volunteer-Button contact-Button donate-Button"
-      "stroke stroke stroke stroke";
+      "Logo Phone-number  Phone-number      Phone-number"
+      "Report-Button      Report-Button     CampaignsButton   CampaignsButton"
+      "Volunteer-Button   Volunteer-Button  contact-Button    donate-Button"
+      "stroke             stroke            stroke            stroke";
     grid-area: Nav;
     background-color:red;
 
   }
 
-.Logo { 
-  grid-area: Logo;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: auto;
-  margin-right: auto;
-}
+  .Logo { 
+    grid-area: Logo;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aqua;
+  }
 
-.Logo img{
-  background-color:bisque;
-  width: 2em;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1em;
-}
+  .Logo img{
+    background-color:bisque;
+    width: 2em;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+  }
 
-.Phone-number { 
-  text-align: center;
-  grid-area: Phone-number; 
-  background-color: grey;
-}
+  .Phone-number { 
+    text-align: center;
+    grid-area: Phone-number; 
+    background-color: grey;
+  }
 
-.Report-Button { 
-  grid-area: Report-Button;
-  background-color: purple;
-}
+  .Report-Button { 
+    grid-area: Report-Button;
+    background-color: purple;
+  }
 
-.Report-Button button {
-  background-color: #495867;
-  border: none;
-  padding: 8px 8px;
-  margin-left: 1em;
-  margin-right: 1em;
-  border-radius: 25px;
-  color: white;
-}
+  .Report-Button button {
+    background-color: #495867;
+    border: none;
+    padding: 8px 8px;
+    margin-left: 1em;
+    margin-right: 1em;
+    border-radius: 25px;
+    color: white;
+  }
 
-.CampaignsButton { 
-  grid-area: CampaignsButton;
-  background-color: pink;
-}
+  .CampaignsButton { 
+    grid-area: CampaignsButton;
+    background-color: pink;
+  }
 
-.CampaignsButton button {
-  margin-left: 1em;
-  margin-right: 1em;
-}
+  .CampaignsButton button {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
 
-.Volunteer-Button { 
-  background-color: yellow; 
-}
+  .Volunteer-Button { 
+    background-color: yellow; 
+  }
 
-.Volunteer-Button button {
-  margin-left: 1em;
-  margin-right: 1em;
-}
+  .Volunteer-Button button {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
 
-.contact-Button { 
-  background-color: orange; 
-}
+  .contact-Button { 
+    background-color: orange; 
+  }
 
-.contact-Button button {
-  margin-left: 1em;
-  margin-right: 1em;
-}
+  .contact-Button button {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
 
-.donate-Button { 
-  background-color:  blue; 
-}
+  .donate-Button { 
+    background-color:  blue; 
+  }
 
-.donate-Button button {
-  margin-left: 1em;
-  margin-right: 1em;
-}
-    
-
+  .donate-Button button {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
 
 
+
+  .Image1 { 
+    display: none;
+  }
+
+  .Image2 { 
+    display: none;
+  }
 
 
   .Section-1 {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
     gap: 0px 0px;
     grid-template-areas:
       "Who-we-are"
@@ -735,6 +1140,115 @@
       "Donation-text";
     grid-area: Section-1;
   }
+
+
+  .Who-we-are { 
+    grid-area: Who-we-are; 
+    background-color:aqua;
+  }
+
+  .Who-we-are p {
+    text-align: center; 
+    font-size: 200%;
+    background-color:blue;
+  }
+
+  .Title { 
+    grid-area: Title; 
+    background-color:coral;
+  }
+
+  .Title p {
+    text-align: center; 
+    font-size: 200%;
+    background-color:rgb(0, 255, 64);
+  }
+
+  .Donation-bubbles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 0px 0px;
+    grid-template-areas:
+      "bubble1 bubble2 bubble3"
+      "bubble1 bubble2 bubble3";
+    grid-area: Donation-bubbles;
+    background-color:aqua;
+    padding-bottom: 2em;
+  }
+
+  .bubble1 { 
+    grid-area: bubble1; 
+  }
+
+  .bubble2 { 
+    grid-area: bubble2; 
+  }
+
+  .bubble3 { 
+    grid-area: bubble3; 
+  }
+
+  .bubble1, .bubble2, .bubble3 {
+    background-color: white;
+    width: 70%;
+    height: 80%;
+    border-radius: 25px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center; 
+    display: inline-block;
+  }
+
+
+  .bubble1, .bubble2, .bubble3 p{
+    font-size: 80%;
+  }
+
+  .Donate-Button2 { 
+    grid-area: Donate-Button2; 
+    background-color:red;
+  }
+
+  .section1-donate-button {
+    font-size: 100%;
+    width: 70%;
+    height: 30%;
+    background-color: #495867;
+    border: none;
+    padding: 8px 8px;
+    text-align: center;
+    border-radius: 25px;
+    color: white;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    
+  }
+
+  .Donation-text { 
+    grid-area: Donation-text; 
+    background-color:coral;
+  }
+
+  .Donation-text p {
+    text-align:center;
+  }
+
+  .Who-we-are-text { 
+    grid-area: Who-we-are-text; 
+    background-color:antiquewhite;
+    padding: 2em;
+  }
+
+
+
   .Picture1 { 
     display: none;
   }
@@ -744,6 +1258,74 @@
   .Picture3 { 
     display: none;
   }
+  /* ________________________________________________________________________________ */
+
+  /* page2 */
+
+  /* ________________________________________________________________________________ */
+
+  .Info {
+    display: block;
+  }
+
+
+  .Form-Details {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+
+
+  .Form-Details-Box {
+    margin-left: 2em;
+    margin-right: 2em;
+
+  }
+
+  .Form-Location {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+
+  .Form-Location-Box {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  .Form-Animal {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+
+  .Form-Animal-Box {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+
+  .Form {
+    display: block;
+  }
+
+  /* ________________________________________________________________________________ */
+
+  /* page3 */
+
+  /* ________________________________________________________________________________ */
+
+
+
+
+  .Campaigns-Title {
+    text-align: center;
+    margin: 0em;
+  }
+
+
+  .Campaigns-Block {
+    display: block;
+    text-align: center;
+  }
 }
-
-
