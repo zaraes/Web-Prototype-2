@@ -1019,6 +1019,203 @@ ul {
 }
 
 
+/* ________________________________________________________________________________ */
+
+/* Page5 */
+
+/* ________________________________________________________________________________ */
+
+.grid-container-donate {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  grid-template-rows: auto auto auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Nav Nav Nav"
+    "Donate-Title Donate-Title Donate-Title"
+    "... Donate-Info ...";
+}
+
+.Donate-Title {
+  grid-area: Donate-Title;
+}
+
+.Donate-Info {
+  display: grid;
+  grid-area: Donate-Info;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto auto auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Donation-freq   Donation-freq   Donation-freq   Donation-freq   Donation-freq   Donation-freq"
+    "FirstName       FirstName       FirstName       LastName        LastName        LastName     "
+    "Email           Email           Email           Email           Email           Email        "
+    "Country         Country         Country         Country         Country         Country      "
+    "Amount          Amount          Amount          Amount          Amount          Amount       "
+    "donateAmount    donateAmount    donateAmount    donateAmount    donateAmount    donateAmount "
+    "Donate-donate   Donate-donate   Donate-donate   Donate-donate   Donate-donate   Donate-donate";
+}
+
+.Donation-freq {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 0px 0px;
+  grid-area: Donation-freq;
+  background-color:aqua;
+  grid-template-areas:
+  "Donation-freq-1 Donation-freq-month Donation-freq-paypal";
+  margin-bottom: 2em;
+}
+
+.Donation-freq-1 {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  text-align: center;
+  grid-area: Donation-freq-1;
+  background-color:#E7AD99;
+  border-right-style: solid;
+  border-width: 1px;
+}
+      
+.Donation-freq-month {
+  text-align: center;
+  grid-area: Donation-freq-month;
+  background-color:#E7AD99
+}
+       
+.Donation-freq-paypal {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  text-align: center;
+  grid-area: Donation-freq-paypal;
+  background-color: #E7AD99;
+  border-left-style: solid;
+  border-width: 1px;
+}
+
+.FirstName {
+  grid-area: FirstName;
+  background-color:azure;
+}
+
+.FirstName input {
+  width: 90%;
+}
+
+.LastName {
+  grid-area: LastName;
+  background-color:cornsilk;
+}
+
+.LastName input {
+  width:90%;
+}
+
+.Email {
+  grid-area: Email;
+  background-color:cyan;
+}
+
+.Country {
+  grid-area: Country;
+  background-color:deeppink;
+}
+
+.Amount {
+  grid-area: Amount;
+  background-color:mediumturquoise;
+}
+
+.donateAmount {
+  grid-area: donateAmount;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 0px 0px;
+  grid-template-areas:
+  "donate50 donate25 donate5 myChoice"
+}
+
+.donate50 {
+  grid-area: donate50;
+}
+
+.donate25 {
+  grid-area: donate25;
+}
+
+.donate5 {
+  grid-area: donate5;
+}
+
+.myChoice {
+  grid-area: myChoice;
+}
+
+.donate50, .donate25, .donate5, .myChoice {
+  background-color: #ECC8AF;
+  width: 70%;
+  height: 70%;
+  border-radius: 10px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: inline-block;
+  text-align: center;
+}
+
+.Donate-donate {
+  margin-top: 8em;
+  grid-area: Donate-donate;
+  background-color:oldlace;
+}
+
+.Donate-donate button {
+  font-size: 100%;
+  width: 70%;
+  height: 30%;
+  background-color: #495867;
+  border: none;
+  padding: 8px 8px;
+  text-align: center;
+  border-radius: 25px;
+  color: white;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+}
+
+
+label {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.2em;
+
+}
+
+input {
+  width: 95%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-top: auto;
+  padding-right: auto;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 /* ________________________________________________________________________________ */
@@ -1354,7 +1551,25 @@ ul {
   }
 
 
- 
+  /* ________________________________________________________________________________ */
+
+  /* page5 */
+
+  /* ________________________________________________________________________________ */
+
+  .Donate-Info{
+    display: block;
+    margin-left: 3em;
+    margin-right: 3em;
+  }
+
+  .Donate-Info input {
+    width:90%;
+  }
+
+  .grid-container-donate {
+    display: block;
+  }
 
 
 
