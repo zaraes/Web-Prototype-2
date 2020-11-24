@@ -26,6 +26,31 @@ a:active {
   color: white;
 }
 
+h1, h2, h3 {
+  font-family: "Castoro";
+}
+
+h1 {
+  font-size: 35px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+
+p {
+  font-family: "Mukta";
+  font-size: 20px;
+}
 
 
 
@@ -258,6 +283,7 @@ a:active {
     "Picture3         Picture2          Picture1          Donation-text         Donation-text";
   grid-area: Section-1;
   background-color: #ECC8AF;
+  /* background-image: "background.png"; */
 }
 
 .Who-we-are { 
@@ -287,17 +313,109 @@ a:active {
   grid-area: Donation-bubbles;
 }
 
-.bubble1 { 
-  grid-area: bubble1; 
-}
 
-.bubble2 { 
-  grid-area: bubble2; 
-}
+  .Donation-bubbles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 0px 0px;
+    grid-template-areas:
+      "bubble1 bubble2 bubble3"
+      "bubble1 bubble2 bubble3";
+    grid-area: Donation-bubbles;
+    padding-bottom: 2em;
+  }
 
-.bubble3 { 
-  grid-area: bubble3; 
-}
+  .bubble1 { 
+    grid-area: bubble1; 
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 50px 50px 50px;
+    gap: 0px 0px;
+    grid-template-areas:
+      "bubbleTitle1"
+      "bubbleMessage1"
+      "bubbleExtra1"
+      "bubbleAmount1";
+  }
+
+  .bubbleTitle1 {
+    grid-area: bubbleTitle1;
+    background-color: aqua;
+  }
+
+  .bubbleMessage1 {
+    grid-area: bubbleMessage1;
+    background-color: crimson;
+  }
+
+  .bubbleExtra1 {
+    grid-area: bubbleExtra1;
+    background-color: blue;
+  }
+
+  .bubbleAmount1 {
+    grid-area: bubbleAmount1;
+    background-color: antiquewhite;
+  }
+
+  .bubble2 { 
+    grid-area: bubble2; 
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 50px 50px 50px;
+    gap: 0px 0px;
+    grid-template-areas:
+      "bubbleTitle2"
+      "bubbleMessage2"
+      "bubbleExtra2"
+      "bubbleAmount2";
+  }
+
+  .bubbleTitle2 {
+    grid-area: bubbleTitle2;
+    background-color: aqua;
+  }
+
+  .bubbleMessage2 {
+    grid-area: bubbleMessage2;
+    background-color:crimson;
+  }
+
+  .bubbleExtra2 {
+    background-color: blue;
+  }
+
+  .bubbleAmount2 {
+    grid-area: bubbleAmount2;
+    background-color: blanchedalmond;
+  }
+
+  .bubble3 { 
+    grid-area: bubble3; 
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 50px 50px 50px;
+    gap: 0px 0px;
+    grid-template-areas:
+      "bubbleTitle3"
+      "bubbleMessage3"
+      "bubbleExtra3"
+      "bubbleAmount3";
+  }
+
+  .bubbleTitle3 {
+    grid-area: bubbleTitle3;
+  }
+
+  .bubbleMessage3 {
+    grid-area: bubbleMessage;
+  }
+
+  .bubbleAmount3 {
+    grid-area: bubbleAmount3;
+  }
+
 
 .bubble1, .bubble2, .bubble3 {
   background-color: white;
@@ -317,9 +435,6 @@ a:active {
 }
 
 
-.bubble1, .bubble2, .bubble3 p{
-  font-size: 80%;
-}
 
 .Donate-Button-outer {
   grid-area: Donate-Button-outer;
@@ -1337,7 +1452,6 @@ input {
 
 }
 
-/* 661 */
 @media screen and (max-width: 1025px) {
 
 /* ________________________________________________________________________________ */
@@ -1436,30 +1550,6 @@ input {
     font-size: 200%;
   }
 
-  .Donation-bubbles {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 0px 0px;
-    grid-template-areas:
-      "bubble1 bubble2 bubble3"
-      "bubble1 bubble2 bubble3";
-    grid-area: Donation-bubbles;
-    padding-bottom: 2em;
-  }
-
-  .bubble1 { 
-    grid-area: bubble1; 
-  }
-
-  .bubble2 { 
-    grid-area: bubble2; 
-  }
-
-  .bubble3 { 
-    grid-area: bubble3; 
-  }
-
   .bubble1, .bubble2, .bubble3 {
     background-color: white;
     width: 70%;
@@ -1477,10 +1567,6 @@ input {
     display: inline-block;
   }
 
-
-  .bubble1, .bubble2, .bubble3 p{
-    font-size: 80%;
-  }
 
   .Donate-Button2 { 
     grid-area: Donate-Button2; 
