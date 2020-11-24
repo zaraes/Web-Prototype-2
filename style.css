@@ -1,5 +1,38 @@
 /* ________________________________________________________________________________ */
 
+/* General settings */
+
+/* ________________________________________________________________________________ */
+
+
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+ text-decoration: none;
+ color: white;
+}
+
+a:active {
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
+
+
+/* ________________________________________________________________________________ */
+
 /* Page1 */
 
 /* ________________________________________________________________________________ */
@@ -23,36 +56,18 @@
 
 /* ________________________________________________________________________________ */
 
-/* Nav Elements */
+/* Page1 Nav Elements */
 
 /* ________________________________________________________________________________ */
-a:link {
-  text-decoration: none;
-  color: white;
-}
 
-a:visited {
-  text-decoration: none;
-  color: white;
-}
-
-a:hover {
- text-decoration: none;
- color: white;
-}
-
-a:active {
-  text-decoration: none;
-  color: white;
-}
 
 .Nav {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto;
-  grid-template-rows: 1fr 0.6fr 0.5fr 3px;
+  grid-template-rows: auto auto auto 3px;
   gap: 0px 0px;
   grid-template-areas:
-    "Logo Phone-number Phone-number Phone-number . . ."
+    "Logo Phone-number Phone-number Phone-number Phone-number Phone-number Phone-number"
     "Logo Report-Button CampaignsButton Volunteer-Button . contact-Button donate-Button"
     "empty empty empty empty empty empty empty"
     "stroke stroke stroke stroke stroke stroke stroke";
@@ -75,7 +90,6 @@ a:active {
 }
 
 .Logo img{
-  /* background-color:bisque; */
   width: 8em;
   margin-top: auto;
   margin-bottom: auto;
@@ -89,13 +103,11 @@ a:active {
 }
 
 .Phone-number p { 
-  grid-area: Phone-number; 
   color:black;
 }
 
 .Report-Button { 
   grid-area: Report-Button;
-  /* background-color: purple; */
 }
 
 .Report-Button button {
@@ -109,7 +121,6 @@ a:active {
 
 .CampaignsButton { 
   grid-area: CampaignsButton;
-  /* background-color: red; */
 }
 
 .CampaignsButton button {
@@ -123,7 +134,6 @@ a:active {
 
 .Volunteer-Button { 
   grid-area: Volunteer-Button;
-  /* background-color: yellow;  */
 }
 
 .Volunteer-Button button {
@@ -137,7 +147,6 @@ a:active {
 
 .contact-Button { 
   grid-area: contact-Button;
-  /* background-color: pink;  */
 }
 
 .contact-Button button {
@@ -151,7 +160,6 @@ a:active {
 
 .donate-Button { 
   grid-area: donate-Button;
-  /* background-color:  blue;  */
 }
 
 .donate-Button button {
@@ -171,13 +179,13 @@ a:active {
 
 /* ________________________________________________________________________________ */
 
-/* Display Image */
+/* Page1 Display Image */
 
 /* ________________________________________________________________________________ */
 .Display-Image {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: auto;
   gap: 0px 0px;
   grid-template-areas:
     "Image1 Text Image2";
@@ -187,13 +195,13 @@ a:active {
 
 .Image1 { 
   grid-area: Image1;
-  /* background-color: beige; */
+  text-align: center;
   padding:0em;
 }
 
 .Image1 img {
-  /* background-color:pink; */
   width: 100%;
+  max-width: 250px;
   margin-top: auto;
   margin-bottom: auto;
   margin-left: auto;
@@ -202,7 +210,6 @@ a:active {
 
 .Text { 
   grid-area: Text;
-  /* background-color: blue; */
   margin-top: auto;
   margin-bottom: auto;
   margin-left: auto;
@@ -212,19 +219,17 @@ a:active {
 
 .Text > h1 {
   text-align: center; 
-  /* background-color: pink; */
-  /* position:relative; */
 }
 
 .Image2 { 
   grid-area: Image2;
-  /* background-color:darkcyan; */
+  text-align: center;
   padding: 0em;
 }
 
 .Image2 img {
-  /* background-color:aliceblue; */
   width: 100%;
+  max-width: 250px;
   margin-top: auto;
   margin-bottom: auto;
   margin-left: auto;
@@ -237,42 +242,38 @@ a:active {
 
 /* ________________________________________________________________________________ */
 
-/* Section1 */
+/* Page1 Section1 */
 
 /* ________________________________________________________________________________ */
 .Section-1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto 3fr auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
   gap: 0px 0px;
   grid-template-areas:
     "Who-we-are Who-we-are Who-we-are Title Title"
-    "Who-we-are-text Who-we-are-text Who-we-are-text Donation-bubbles Donation-bubbles"
-    "Who-we-are-text Who-we-are-text Who-we-are-text Donation-bubbles Donation-bubbles"
-    "Who-we-are-text Who-we-are-text Who-we-are-text Donate-Button2 Donate-Button2"
-    "Picture3 Picture2 Picture1 Donation-text Donation-text";
+    "Who-we-are-text  Who-we-are-text   Who-we-are-text   Donation-bubbles      Donation-bubbles"
+    "Who-we-are-text  Who-we-are-text   Who-we-are-text   Donation-bubbles      Donation-bubbles"
+    "Who-we-are-text  Who-we-are-text   Who-we-are-text   Donate-Button-outer   Donate-Button-outer"
+    "Picture3         Picture2          Picture1          Donation-text         Donation-text";
   grid-area: Section-1;
   background-color: #ECC8AF;
 }
 
 .Who-we-are { 
   grid-area: Who-we-are; 
-  /* background-color:aqua; */
 }
 
 .Who-we-are h2 {
   text-align: center; 
-  /* background-color:blue; */
 }
 
 .Title { 
   grid-area: Title; 
-  /* background-color:coral; */
 }
 
 .Title h2 {
   text-align: center; 
-  /* background-color:rgb(0, 255, 64); */
 }
 
 .Donation-bubbles {
@@ -284,7 +285,6 @@ a:active {
     "bubble1 bubble2 bubble3"
     "bubble1 bubble2 bubble3";
   grid-area: Donation-bubbles;
-  /* background-color:aqua; */
 }
 
 .bubble1 { 
@@ -321,15 +321,27 @@ a:active {
   font-size: 80%;
 }
 
-.Donate-Button2 { 
-  grid-area: Donate-Button2; 
-  /* background-color:red; */
+.Donate-Button-outer {
+  grid-area: Donate-Button-outer;
+  display: grid;
+  grid-template-columns: 1fr ;
+  grid-template-rows: 3fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Donate-Button2";
 }
 
-.section1-donate-button {
+.Donate-Button2 { 
+  grid-area: Donate-Button2; 
+  margin: 1em;
+  margin-top: 2em;
+}
+
+
+.Donate-Button2 button {
   font-size: 100%;
   width: 70%;
-  height: 30%;
+  height: 80%;
   background-color: #495867;
   border: none;
   padding: 8px 8px;
@@ -344,28 +356,28 @@ a:active {
 
 .Donation-text { 
   grid-area: Donation-text; 
-  /* background-color:coral; */
 }
 
 .Donation-text p {
   text-align:center;
+  margin: 2em;
 }
 
 .Who-we-are-text { 
   grid-area: Who-we-are-text; 
-  /* background-color:antiquewhite; */
   padding: 2em;
 }
 
 .Picture1 { 
   grid-area: Picture1;
-  /* background-color:rgb(205, 255, 230); */
-
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .Picture1 img {
   border-radius: 25px;
-  /* background-color: crimson; */
   width:100%;
   display: block;
   margin: 0 auto;
@@ -373,7 +385,6 @@ a:active {
 
 .Picture2 { 
   grid-area: Picture2; 
-  /* background-color: cyan; */
   margin-top: auto;
   margin-bottom: auto;
   margin-left: auto;
@@ -383,12 +394,10 @@ a:active {
 .Picture2 img {
   border-radius: 25px;
   width:100%;
-  /* background-color:red; */
 }
 
 .Picture3 { 
   grid-area: Picture3; 
-  /* background-color:cornsilk; */
   margin-top: auto;
   margin-bottom: auto;
   margin-left: auto;
@@ -398,12 +407,11 @@ a:active {
 .Picture3 img {
   border-radius: 25px;
   width:100%;
-  /* background-color: red; */
 }
 
 /* ________________________________________________________________________________ */
 
-/* Section2 */
+/* Page1 Section2 */
 
 /* ________________________________________________________________________________ */
 .Section-2 {
@@ -423,38 +431,38 @@ a:active {
   text-align: center;
 }
 
-/* .Rescue-Log p {
-  /* background-color: purple; */
-/* } */ 
-
 .Log1 { 
   grid-area: Log1; 
-  /* background-color:blue; */
+  text-align: center;
 }
 
 .Log1 img {
   width:100%;
   border-radius: 25px;
+  max-width: 300px;
 }
 
 .Log2 { 
   grid-area: Log2;
-  /* background-color:cadetblue; */
+  text-align: center;
 }
 
 .Log2 img {
   width:100%;
   border-radius: 25px;
+  max-width: 300px;
 }
 
 .Log3 { 
   grid-area: Log3; 
-  /* background-color:chocolate; */
+  text-align: center;
 }
 
 .Log3 img {
   width:100%;
   border-radius: 25px;
+  max-width: 300px;
+  
 
 }
 
@@ -462,7 +470,6 @@ a:active {
   grid-area: Log1Text; 
   text-align: center;
   padding: 1em;
-  /* background-color:aliceblue; */
 }
 
 .Log1Text p {
@@ -474,7 +481,6 @@ a:active {
   grid-area: Log2Text; 
   text-align: center;
   padding: 1em;
-  /* background-color:aqua; */
 }
 
 .Log2Text p {
@@ -486,7 +492,6 @@ a:active {
   grid-area: Log3Text; 
   text-align: center;
   padding: 1em;
-  /* background-color:blueviolet; */
 }
 
 .Log3Text p {
@@ -497,7 +502,7 @@ a:active {
 
 /* ________________________________________________________________________________ */
 
-/* Section3 */
+/* Page1 Section3 */
 
 /* ________________________________________________________________________________ */
 .Section-3 {
@@ -516,7 +521,6 @@ a:active {
 .Report-an-Injured-Animal { 
   grid-area: Report-an-Injured-Animal; 
   text-align: center;
-  /* background-color:beige; */
   margin:1em;
 }
 
@@ -532,30 +536,26 @@ a:active {
 
 .ReportText { 
   grid-area: ReportText; 
-  /* background-color:chartreuse; */
   text-align:center;
   padding: 1em;
 }
 
-/* .ReportText p {
-  /* background-color:darkgreen; */
-
 
 .Image { 
   grid-area: Image; 
-  /* background-color:aliceblue; */
+  text-align: center;
 }
 
 .Image img {
   width:100%;
-  /* background-color:darkblue; */
+  max-width: 300px;
   border-radius: 25px;
 }
 
 
 /* ________________________________________________________________________________ */
 
-/* Section4 */
+/* Page1 Section4 */
 
 /* ________________________________________________________________________________ */
 .Section-4 {
@@ -571,7 +571,6 @@ a:active {
 
 .Our-Campaigns { 
   grid-area: Our-Campaigns; 
-  /* background-color:aliceblue; */
   text-align: center;
   margin:1em;
 }
@@ -588,24 +587,24 @@ a:active {
 
 .Campaign-Image { 
   grid-area: Campaign-Image; 
-  /* background-color:beige; */
+  text-align: center;
 }
 
 .Campaign-Image img {
   width:100%;
+  max-width: 300px;
   border-radius: 25px;
 }
 
 .Campaign-Text { 
   grid-area: Campaign-Text;
-  /* background-color:antiquewhite; */
   text-align:center;
   padding: 1em; 
 }
 
 /* ________________________________________________________________________________ */
 
-/* Section5 */
+/* Page1 Section5 */
 
 /* ________________________________________________________________________________ */
 .Section-5 {
@@ -624,7 +623,6 @@ a:active {
 .Volunteer-Title { 
   grid-area: Volunteer-Title; 
   text-align:center;
-  /* background-color:aliceblue; */
   margin:1em;
 }
 
@@ -640,7 +638,6 @@ a:active {
 
 .Become-Volunteer { 
   grid-area: Become-Volunteer; 
-  /* background-color:bisque; */
   margin:1em;
   text-align: center;
 }
@@ -657,7 +654,6 @@ a:active {
 
 .Become-Carer { 
   grid-area: Become-Carer; 
-  /* background-color:aquamarine; */
   margin:1em;
   text-align: center;
 }
@@ -674,7 +670,6 @@ a:active {
 
 .Volunteer-Image { 
   grid-area: Volunteer-Image; 
-  /* background-color:chartreuse; */
 }
 
 .Volunteer-Image img {
@@ -684,7 +679,6 @@ a:active {
 
 .Volunteer-Image2 { 
   grid-area: Volunteer-Image2; 
-  /* background-color:burlywood; */
 }
 
 .Volunteer-Image2 img {
@@ -711,9 +705,11 @@ a:active {
     "Form  Form  Form  Form  Form  Form";
 }
 
+
+
 /* ________________________________________________________________________________ */
 
-/* Info */
+/* Page2 Info */
 
 /* ________________________________________________________________________________ */
 .Info {
@@ -730,21 +726,19 @@ a:active {
 
 .Info-Title {
   grid-area: Info-Title;
-  /* background-color:aqua; */
   padding: 1em;
   margin-left: 2em;
 }
 
 .Info-text {
   grid-area: Info-text;
-  /* background-color:aquamarine; */
   padding: 1em;
   margin-left: 2em;
 }
 
 /* ________________________________________________________________________________ */
 
-/* Form */
+/* Page2 Form */
 
 /* ________________________________________________________________________________ */
 .Form {
@@ -757,13 +751,36 @@ a:active {
   "Form-Details       Form-Details      Form-Animal       Form-Animal"
   "Form-Details-Box   Form-Details-Box  Form-Animal-Box   Form-Animal-Box"
   "Form-Location      Form-Location     Form-Animal-Box   Form-Animal-Box"
-  "Form-Location-Box  Form-Location-Box Form-Animal-Box   Form-Animal-Box";
+  "Form-Location-Box  Form-Location-Box Submit            Submit";
   grid-area: Form;
-  /* margin: 2em; */
-  background-color:aliceblue;
+  margin: 2em;
   
 }
 
+.Submit {
+  grid-area: Submit;
+  background-color:aqua;
+  text-align: center;
+  margin-top: 5em;
+  margin-bottom: 10em;
+  margin-left: 5em;
+}
+
+.Submit button {
+  
+  font-size: 100%;
+  width: 70%;
+  height: 80%;
+  background-color: #495867;
+  border: none;
+  padding: 8px 8px;
+  text-align: center;
+  border-radius: 25px;
+  color: white;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+}
 
 label {
   display: inline-block;
@@ -796,40 +813,41 @@ input {
 .Form-Title {
   grid-area: Form-Title;
   text-align: center;
-  background-color:coral;
+
 }
 
 .Form-Details {
   grid-area: Form-Details;
-  background-color:red;
+  margin-left: 5em;
+  
 }
 
 
 .Form-Details-Box {
   grid-area: Form-Details-Box;
-  /* background-color:violet; */
+  margin-left: 5em;
 }
 
 .Form-Location {
   grid-area: Form-Location;
-  background-color:pink;
+  margin-left: 5em;
 }
 
 
 .Form-Location-Box {
   grid-area: Form-Location-Box;
-  /* background-color:orange; */
+  margin-left: 5em;
 }
 
 .Form-Animal {
   grid-area: Form-Animal;
-  background-color: greenyellow;
+  margin-left: 5em;
 }
 
 
 .Form-Animal-Box {
   grid-area: Form-Animal-Box;
-  /* background-color:lightblue; */
+  margin-left: 5em;
 }
 
 ul {
@@ -859,7 +877,6 @@ ul {
 .Campaigns-Title {
   grid-area: Campaigns-Title;
   margin-left: 3em;
-  /* background-color:antiquewhite; */
 }
 
 .Campaigns-Block {
@@ -873,7 +890,6 @@ ul {
     "Landcare         Wildlife         AWC"
     "Currumbin-Title  AussieArk-Title  Water4Wild-Title"
     "Currumbin        AussieArk        Water4Wild";
-  /* background-color:azure; */
 }
 
 .Campaigns-Block p {
@@ -895,8 +911,6 @@ ul {
   margin-top: auto;
   margin-bottom: 4em;
   display: inline-block;
-  /* overflow:hidden;
-  text-overflow:scroll; */
 }
 
 .Landcare-Title {
@@ -976,6 +990,7 @@ ul {
     "Volunteer-Info";
 }
 
+
 .Volunteer-Info {
   display: grid;
   grid-area: Volunteer-Info;
@@ -999,13 +1014,11 @@ ul {
 }
 
 .Rescuer-Title {
-  background-color:aquamarine;
   text-align: center;
   grid-area: Rescuer-Title;
 }
 
 .Carer-Title {
-  background-color:aliceblue;
   text-align: center;
   grid-area: Carer-Title;
 }
@@ -1036,6 +1049,7 @@ ul {
     "... Donate-Info ...";
 }
 
+
 .Donate-Title {
   grid-area: Donate-Title;
 }
@@ -1062,7 +1076,6 @@ ul {
   grid-template-rows: auto;
   gap: 0px 0px;
   grid-area: Donation-freq;
-  background-color:aqua;
   grid-template-areas:
   "Donation-freq-1 Donation-freq-month Donation-freq-paypal";
   margin-bottom: 2em;
@@ -1096,7 +1109,6 @@ ul {
 
 .FirstName {
   grid-area: FirstName;
-  background-color:azure;
 }
 
 .FirstName input {
@@ -1105,7 +1117,6 @@ ul {
 
 .LastName {
   grid-area: LastName;
-  background-color:cornsilk;
 }
 
 .LastName input {
@@ -1114,17 +1125,14 @@ ul {
 
 .Email {
   grid-area: Email;
-  background-color:cyan;
 }
 
 .Country {
   grid-area: Country;
-  background-color:deeppink;
 }
 
 .Amount {
   grid-area: Amount;
-  background-color:mediumturquoise;
 }
 
 .donateAmount {
@@ -1173,7 +1181,6 @@ ul {
 .Donate-donate {
   margin-top: 8em;
   grid-area: Donate-donate;
-  background-color:oldlace;
 }
 
 .Donate-donate button {
@@ -1223,7 +1230,112 @@ input {
 /* Media Queries */
 
 /* ________________________________________________________________________________ */
+@media screen and (max-width: 644px) {
+  .Nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto, auto, auto 3px;
+    gap: 0px 0px;
+    grid-template-areas:
+      "Logo               Phone-number      Phone-number      Phone-number      Phone-number      Phone-number"
+      "Report-Button      Report-Button     Report-Button     CampaignsButton   CampaignsButton   CampaignsButton"
+      "Volunteer-Button   Volunteer-Button  contact-Button    contact-Button    donate-Button     donate-Button"
+      "stroke             stroke            stroke            stroke            stroke            stroke";
+    grid-area: Nav;
 
+  }
+
+  .Nav button {
+    border-radius: 15px;
+
+  }
+  .Logo { 
+    grid-area: Logo;
+  }
+
+  .Logo img{
+    width: 5em;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+  }
+
+
+  .Phone-number { 
+    margin: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding: 0px;
+    grid-area: Phone-number;  
+  }
+  
+
+  .Report-Button { 
+    grid-area: Report-Button;
+    background-color: lightpink;
+  }
+
+  .Report-Button button {
+    background-color: #495867;
+    border: none;
+    padding: 8px 8px;
+    color: white;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .CampaignsButton { 
+    grid-area: CampaignsButton;
+    text-align: right;
+    background-color: darkgray;
+  }
+
+  .CampaignsButton button {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .Volunteer-Button {
+    background-color:aquamarine;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .Volunteer-Button button {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .contact-Button {
+    text-align: center;
+    background-color: aqua;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .contact-Button button {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .donate-Button {
+    text-align: right;
+    background-color:chartreuse;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .donate-Button button {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+
+}
 
 /* 661 */
 @media screen and (max-width: 1025px) {
@@ -1233,98 +1345,23 @@ input {
 /* page1 */
 
 /* ________________________________________________________________________________ */
-  .Nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto, auto, auto 3px;
-    gap: 0px 0px;
-    grid-template-areas:
-      "Logo Phone-number  Phone-number      Phone-number"
-      "Report-Button      Report-Button     CampaignsButton   CampaignsButton"
-      "Volunteer-Button   Volunteer-Button  contact-Button    donate-Button"
-      "stroke             stroke            stroke            stroke";
-    grid-area: Nav;
-    background-color:red;
 
-  }
 
-  .Logo { 
-    grid-area: Logo;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: aqua;
-  }
+  /* ________________________________________________________________________________ */
 
-  .Logo img{
-    background-color:bisque;
-    width: 2em;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1em;
-  }
+  /* page1 Nav */
 
-  .Phone-number { 
-    text-align: center;
-    grid-area: Phone-number; 
-    background-color: grey;
-  }
+  /* ________________________________________________________________________________ */
+  
 
-  .Report-Button { 
-    grid-area: Report-Button;
-    background-color: purple;
-  }
 
-  .Report-Button button {
-    background-color: #495867;
-    border: none;
-    padding: 8px 8px;
-    margin-left: 1em;
-    margin-right: 1em;
-    border-radius: 25px;
-    color: white;
-  }
 
-  .CampaignsButton { 
-    grid-area: CampaignsButton;
-    background-color: pink;
-  }
 
-  .CampaignsButton button {
-    margin-left: 1em;
-    margin-right: 1em;
-  }
+  /* ________________________________________________________________________________ */
 
-  .Volunteer-Button { 
-    background-color: yellow; 
-  }
+  /* page1 Display Image */
 
-  .Volunteer-Button button {
-    margin-left: 1em;
-    margin-right: 1em;
-  }
-
-  .contact-Button { 
-    background-color: orange; 
-  }
-
-  .contact-Button button {
-    margin-left: 1em;
-    margin-right: 1em;
-  }
-
-  .donate-Button { 
-    background-color:  blue; 
-  }
-
-  .donate-Button button {
-    margin-left: 1em;
-    margin-right: 1em;
-  }
-
+  /* ________________________________________________________________________________ */
 
 
   .Image1 { 
@@ -1335,6 +1372,34 @@ input {
     display: none;
   }
 
+.Text { 
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.Text > h1 {
+  text-align: center; 
+}
+
+
+
+
+
+
+
+
+
+
+
+  /* ________________________________________________________________________________ */
+
+  /* page1 Section1 */
+
+  /* ________________________________________________________________________________ */
 
   .Section-1 {
     display: grid;
@@ -1347,7 +1412,7 @@ input {
       "Title"
       "Donation-bubbles"
       "Donation-bubbles"
-      "Donate-Button2"
+      "Donate-Button-outer"
       "Donation-text";
     grid-area: Section-1;
   }
@@ -1355,24 +1420,20 @@ input {
 
   .Who-we-are { 
     grid-area: Who-we-are; 
-    background-color:aqua;
   }
 
   .Who-we-are p {
     text-align: center; 
     font-size: 200%;
-    background-color:blue;
   }
 
   .Title { 
     grid-area: Title; 
-    background-color:coral;
   }
 
   .Title p {
     text-align: center; 
     font-size: 200%;
-    background-color:rgb(0, 255, 64);
   }
 
   .Donation-bubbles {
@@ -1384,7 +1445,6 @@ input {
       "bubble1 bubble2 bubble3"
       "bubble1 bubble2 bubble3";
     grid-area: Donation-bubbles;
-    background-color:aqua;
     padding-bottom: 2em;
   }
 
@@ -1424,7 +1484,6 @@ input {
 
   .Donate-Button2 { 
     grid-area: Donate-Button2; 
-    background-color:red;
   }
 
   .section1-donate-button {
@@ -1445,7 +1504,6 @@ input {
 
   .Donation-text { 
     grid-area: Donation-text; 
-    background-color:coral;
   }
 
   .Donation-text p {
@@ -1454,7 +1512,6 @@ input {
 
   .Who-we-are-text { 
     grid-area: Who-we-are-text; 
-    background-color:antiquewhite;
     padding: 2em;
   }
 
@@ -1469,6 +1526,118 @@ input {
   .Picture3 { 
     display: none;
   }
+
+
+  /* ________________________________________________________________________________ */
+
+  /* page1 Section2 */
+
+  /* ________________________________________________________________________________ */
+
+
+  .Section-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 0.5fr auto;
+    gap: 0px 0px;
+    grid-template-areas:
+      "Rescue-Log Rescue-Log"
+      "Log1 Log2"
+      "Log1Text Log2Text";
+    grid-area: Section-2;
+  }
+
+  .Rescue-Log { 
+    grid-area: Rescue-Log; 
+    text-align: center;
+  }
+
+  .Log1 { 
+    grid-area: Log1;
+  }
+
+
+  .Log2 { 
+    grid-area: Log2;
+  }
+
+  .Log2 img {
+    width:100%;
+    border-radius: 25px;
+  }
+
+  .Log3 { 
+    display: none;
+  }
+
+  .Log1Text { 
+    grid-area: Log1Text;
+  }
+
+
+  .Log2Text { 
+    grid-area: Log2Text;
+  }
+
+  .Log3Text { 
+    display: none;
+  }
+
+
+  /* ________________________________________________________________________________ */
+
+  /* page1 Section3 */
+
+  /* ________________________________________________________________________________ */
+
+
+  .Section-3 {
+    display: block;
+  }
+
+  .Image { 
+    display: none;
+  }
+
+
+  /* ________________________________________________________________________________ */
+
+  /* page1 Section4 */
+
+  /* ________________________________________________________________________________ */
+
+  .Section-4 {
+    display: block;
+  }
+
+  .Campaign-Image { 
+    display: none;
+  }
+
+
+  /* ________________________________________________________________________________ */
+
+  /* page1 Section5 */
+
+  /* ________________________________________________________________________________ */
+
+
+  .Section-5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "Volunteer-Title Volunteer-Title"
+      "Become-Volunteer Become-Carer"
+      "Volunteer-Image Volunteer-Image2";
+    grid-area: Section-5;
+    background-color: #ECC8AF;
+  }
+
+
+
+
   /* ________________________________________________________________________________ */
 
   /* page2 */
@@ -1573,7 +1742,11 @@ input {
 
 
 
+  /* ________________________________________________________________________________ */
 
+  /* Media Query Big screen */
+
+  /* ________________________________________________________________________________ */
 
 
 
