@@ -57,6 +57,21 @@ p {
   font-size: 20px;
 }
 
+input {
+  height: 2.5em;
+  border-radius: 10px;
+  border: 1px solid;
+  border-color: rgb(185, 185, 185);
+  background-color: #E5E5E5;
+  box-shadow: 5px 5px 2px rgb(185, 185, 185) inset;
+  resize: vertical;
+  width: 95%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-top: auto;
+  padding-right: auto;
+}
+
 
 
 
@@ -73,7 +88,7 @@ p {
   grid-template-rows: auto auto auto auto auto auto 1fr;
   gap: 0px 0px;
   grid-template-areas:
-    "Nav Nav Nav Nav Nav Nav"
+    "nav nav nav nav nav nav"
     "Display-Image Display-Image Display-Image Display-Image Display-Image Display-Image"
     "Section-1 Section-1 Section-1 Section-1 Section-1 Section-1"
     "Section-2 Section-2 Section-2 Section-2 Section-2 Section-2"
@@ -91,7 +106,7 @@ p {
 /* ________________________________________________________________________________ */
 
 
-.Nav {
+nav {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto;
   grid-template-rows: auto auto auto 3px;
@@ -101,7 +116,7 @@ p {
     "Logo Report-Button CampaignsButton Volunteer-Button . contact-Button donate-Button"
     "empty empty empty empty empty empty empty"
     "stroke stroke stroke stroke stroke stroke stroke";
-  grid-area: Nav;
+  grid-area: nav;
 }
 
 .Logo { 
@@ -212,7 +227,7 @@ p {
 /* Page1 Display Image */
 
 /* ________________________________________________________________________________ */
-.Display-Image {
+#Display-Image {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
@@ -275,7 +290,7 @@ p {
 /* Page1 Section1 */
 
 /* ________________________________________________________________________________ */
-.Section-1 {
+#Section-1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto auto auto;
@@ -631,7 +646,7 @@ p {
 /* Page1 Section2 */
 
 /* ________________________________________________________________________________ */
-.Section-2 {
+#Section-2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto 0.5fr auto;
@@ -726,7 +741,7 @@ p {
 /* Page1 Section3 */
 
 /* ________________________________________________________________________________ */
-.Section-3 {
+#Section-3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto;
@@ -781,7 +796,7 @@ p {
 /* Page1 Section4 */
 
 /* ________________________________________________________________________________ */
-.Section-4 {
+#Section-4 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto;
@@ -833,7 +848,7 @@ p {
 /* Page1 Section5 */
 
 /* ________________________________________________________________________________ */
-.Section-5 {
+#Section-5 {
   display: grid;
   grid-template-columns: 1fr 0.5fr 1fr;
   grid-template-rows: auto auto 1fr;
@@ -931,7 +946,7 @@ p {
   grid-template-rows: auto auto auto;
   gap: 0px 0px;
   grid-template-areas:
-    "Nav   Nav   Nav   Nav   Nav   Nav"
+    "nav   nav   nav   nav   nav   nav"
     "Info  Info  Info  Info  Info  Info"
     "Form  Form  Form  Form  Form  Form";
 }
@@ -943,7 +958,7 @@ p {
 /* Page2 Info */
 
 /* ________________________________________________________________________________ */
-.Info {
+#Info {
   display: grid;
   grid-template-columns: 1fr 1fr 0.5fr;
   grid-template-rows: auto auto;
@@ -973,7 +988,7 @@ p {
 /* Page2 Form */
 
 /* ________________________________________________________________________________ */
-.Form {
+#Form {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto auto auto;
@@ -1012,7 +1027,7 @@ p {
   display: block;
 }
 
-label {
+#Form label {
   display: inline-block;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
@@ -1021,6 +1036,7 @@ label {
 
 input {
   width: 50%;
+  height: 3em;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   padding-top: auto;
@@ -1033,7 +1049,7 @@ input {
   resize: vertical;
 }
 
-.Form li {
+#Form li {
   display: flex;
   flex-wrap: wrap;
 }
@@ -1077,6 +1093,7 @@ input {
   margin-left: 5em;
 }
 
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -1096,7 +1113,7 @@ ul {
   grid-template-rows: auto auto auto;
   gap: 0px 0px;
   grid-template-areas:
-    "Nav   Nav   Nav   Nav   Nav   Nav"
+    "nav   nav   nav   nav   nav   nav"
     "Campaigns-Title  Campaigns-Title  Campaigns-Title  Campaigns-Title  Campaigns-Title  Campaigns-Title"
     "Campaigns-Block  Campaigns-Block  Campaigns-Block  Campaigns-Block  Campaigns-Block  Campaigns-Block";
 }
@@ -1106,7 +1123,7 @@ ul {
   margin-left: 3em;
 }
 
-.Campaigns-Block {
+#Campaigns-Block {
   display: grid;
   grid-area: Campaigns-Block;
   grid-template-columns: 1fr 1fr 1fr;
@@ -1119,7 +1136,7 @@ ul {
     "Currumbin        AussieArk        Water4Wild";
 }
 
-.Campaigns-Block p {
+#Campaigns-Block p {
   margin-left: 2em;
   margin-right: 2em;
   text-overflow: ellipsis;
@@ -1213,12 +1230,12 @@ ul {
   grid-template-rows: auto auto auto auto;
   gap: 0px 0px;
   grid-template-areas:
-    "Nav"
+    "nav"
     "Volunteer-Info";
 }
 
 
-.Volunteer-Info {
+#Volunteer-Info {
   display: grid;
   grid-area: Volunteer-Info;
   grid-template-columns: 1fr 1fr;
@@ -1232,7 +1249,7 @@ ul {
 }
 
 
-.Volunteer-Info p {
+#Volunteer-Info p {
   margin-left: 3em;
   margin-right: 3em;
 }
@@ -1274,7 +1291,7 @@ ul {
   grid-template-rows: auto auto auto;
   gap: 0px 0px;
   grid-template-areas:
-    "Nav Nav Nav"
+    "nav nav nav"
     "Donate-Title Donate-Title Donate-Title"
     "... Donate-Info ...";
 }
@@ -1285,7 +1302,7 @@ ul {
   text-align: center;
 }
 
-.Donate-Info {
+#Donate-Info {
   display: grid;
   grid-area: Donate-Info;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -1431,7 +1448,7 @@ ul {
 }
 
 
-label {
+#Donate-Info label {
   display: block;
   margin-top: 0.5em;
   margin-bottom: 0.2em;
@@ -1456,6 +1473,11 @@ input {
 
 @media screen and (max-width: 1346px) {
 
+/* ________________________________________________________________________________ */
+
+/* Page1 section1 bubbles */
+
+/* ________________________________________________________________________________ */
 
   .bubbleTitle1 p {
     font-size:20px;
@@ -1555,7 +1577,7 @@ input {
 
 /* ________________________________________________________________________________ */
 
-  .Nav {
+  nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto, auto, auto 3px;
@@ -1565,11 +1587,11 @@ input {
       "Report-Button      Report-Button     Report-Button     CampaignsButton   CampaignsButton   CampaignsButton"
       "Volunteer-Button   Volunteer-Button  contact-Button    contact-Button    donate-Button     donate-Button"
       "stroke             stroke            stroke            stroke            stroke            stroke";
-    grid-area: Nav;
+    grid-area: nav;
 
   }
 
-  .Nav button {
+  nav button {
     border-radius: 15px;
 
   }
@@ -1664,7 +1686,7 @@ input {
 
   /* ________________________________________________________________________________ */
 
-  .Section-1 {
+  #Section-1 {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto auto;
@@ -1799,7 +1821,7 @@ input {
   /* ________________________________________________________________________________ */
 
 
-  .Section-2 {
+  #Section-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 0.5fr auto;
@@ -1855,7 +1877,7 @@ input {
   /* ________________________________________________________________________________ */
 
 
-  .Section-3 {
+  #Section-3 {
     display: block;
   }
 
@@ -1870,7 +1892,7 @@ input {
 
   /* ________________________________________________________________________________ */
 
-  .Section-4 {
+  #Section-4 {
     display: block;
   }
 
@@ -1886,7 +1908,7 @@ input {
   /* ________________________________________________________________________________ */
 
 
-  .Section-5 {
+  #Section-5 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto 1fr;
@@ -1908,7 +1930,7 @@ input {
 
   /* ________________________________________________________________________________ */
 
-  .Info {
+  #Info {
     display: block;
   }
 
@@ -1949,7 +1971,7 @@ input {
   }
 
 
-  .Form {
+  #Form {
     display: block;
   }
 
@@ -1970,7 +1992,7 @@ input {
   }
 
 
-  .Campaigns-Block {
+  #Campaigns-Block {
     display: block;
     text-align: center;
   }
@@ -1983,7 +2005,7 @@ input {
   /* ________________________________________________________________________________ */
 
 
-  .Volunteer-Info {
+  #Volunteer-Info {
     display: block;
   }
 
@@ -1994,13 +2016,13 @@ input {
 
   /* ________________________________________________________________________________ */
 
-  .Donate-Info{
+  #Donate-Info{
     display: block;
     margin-left: 3em;
     margin-right: 3em;
   }
 
-  .Donate-Info input {
+  #Donate-Info input {
     width:90%;
   }
 
