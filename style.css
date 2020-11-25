@@ -21,29 +21,34 @@ a:hover {
  color: white;
 }
 
+button:hover {
+ filter: brightness(80%);
+}
+
 a:active {
   text-decoration: none;
   color: white;
 }
 
-h1, h2, h3 {
-  font-family: "Castoro";
-}
-
 h1 {
+  font-family: "Castoro";
   font-size: 35px;
 }
 
+
 h2 {
   font-size: 30px;
+  font-family: "Mukta";
 }
 
 h3 {
   font-size: 25px;
+  font-family: "Mukta";
 }
 
 h4 {
   font-size: 20px;
+  font-family: "Mukta";
 }
 
 
@@ -107,7 +112,7 @@ p {
   margin-right: auto;
 }
 
-.Logo button {
+.Logo-button {
   background: transparent;
   box-shadow: 0px 0px 0px transparent;
   border: 0px solid transparent;
@@ -135,12 +140,12 @@ p {
   grid-area: Report-Button;
 }
 
-.Report-Button button {
+.Report-Button-button {
   background-color: #495867;
   border: none;
   padding: 8px 8px;
   text-align: center;
-  border-radius: 25px;
+  border-radius: 20px;
   color: white;
 }
 
@@ -148,12 +153,12 @@ p {
   grid-area: CampaignsButton;
 }
 
-.CampaignsButton button {
+.CampaignsButton-button {
   background-color: #495867;
   border: none;
   padding: 8px 8px;
   text-align: center;
-  border-radius: 25px;
+  border-radius: 20px;
   color: white;
 }
 
@@ -161,12 +166,12 @@ p {
   grid-area: Volunteer-Button;
 }
 
-.Volunteer-Button button {
+.Volunteer-Button-button {
   background-color: #495867;
   border: none;
   padding: 8px 8px;
   text-align: center;
-  border-radius: 25px;
+  border-radius: 20px;
   color: white;
 }
 
@@ -174,12 +179,12 @@ p {
   grid-area: contact-Button;
 }
 
-.contact-Button button {
+.contact-Button-button {
   background-color: #495867;
   border: none;
   padding: 8px 8px;
   text-align: center;
-  border-radius: 25px;
+  border-radius: 20px;
   color: white;
 }
 
@@ -187,12 +192,12 @@ p {
   grid-area: donate-Button;
 }
 
-.donate-Button button {
+.donate-Button-button {
   background-color: #CE796B;
   border: none;
   padding: 8px 8px;
   text-align: center;
-  border-radius: 25px;
+  border-radius: 20px;
   color: white;
 }
 
@@ -288,6 +293,7 @@ p {
 
 .Who-we-are { 
   grid-area: Who-we-are; 
+  margin-top: 3em;
 }
 
 .Who-we-are h2 {
@@ -296,6 +302,7 @@ p {
 
 .Title { 
   grid-area: Title; 
+  margin-top: 3em;
 }
 
 .Title h2 {
@@ -305,10 +312,9 @@ p {
 .Donation-bubbles {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto;
   gap: 0px 0px;
   grid-template-areas:
-    "bubble1 bubble2 bubble3"
     "bubble1 bubble2 bubble3";
   grid-area: Donation-bubbles;
 }
@@ -317,10 +323,9 @@ p {
   .Donation-bubbles {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto;
     gap: 0px 0px;
     grid-template-areas:
-      "bubble1 bubble2 bubble3"
       "bubble1 bubble2 bubble3";
     grid-area: Donation-bubbles;
     padding-bottom: 2em;
@@ -330,7 +335,7 @@ p {
     grid-area: bubble1; 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 50px 50px 50px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 0px 0px;
     grid-template-areas:
       "bubbleTitle1"
@@ -341,29 +346,57 @@ p {
 
   .bubbleTitle1 {
     grid-area: bubbleTitle1;
-    background-color: aqua;
+    height: 50px;
+    margin-bottom: -1em;
+    margin-top: -1em;
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+
+  .bubbleTitle1 p {
+    font-size:25px;
   }
 
   .bubbleMessage1 {
     grid-area: bubbleMessage1;
-    background-color: crimson;
+    height: 50px;
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+
+  .bubbleMessage1 p {
+    font-size:20px;
   }
 
   .bubbleExtra1 {
     grid-area: bubbleExtra1;
-    background-color: blue;
+    height: 50px;
+    margin-bottom: -1em;
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+
+  .bubbleExtra1 p {
+    font-size:15px;
   }
 
   .bubbleAmount1 {
     grid-area: bubbleAmount1;
-    background-color: antiquewhite;
+    height: 50px;
+    margin-bottom: 2em;
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+
+  .bubbleAmount1 p {
+    font-size:15px;
   }
 
   .bubble2 { 
     grid-area: bubble2; 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 50px 50px 50px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 0px 0px;
     grid-template-areas:
       "bubbleTitle2"
@@ -374,28 +407,59 @@ p {
 
   .bubbleTitle2 {
     grid-area: bubbleTitle2;
-    background-color: aqua;
+    height: 50px;
+    margin-bottom: -1em;
+    margin-top: -1em;
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+
+
+  .bubbleTitle2 p {
+    font-size:25px;
   }
 
   .bubbleMessage2 {
     grid-area: bubbleMessage2;
-    background-color:crimson;
+    height: 50px;
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+
+  .bubbleMessage2 p {
+    font-size:20px;
   }
 
   .bubbleExtra2 {
-    background-color: blue;
+    grid-area: bubbleExtra2;
+    height: 50px;
+    margin-bottom: -1em;
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+
+  .bubbleExtra2 p {
+    font-size: 15px;
+    color: white;
   }
 
   .bubbleAmount2 {
     grid-area: bubbleAmount2;
-    background-color: blanchedalmond;
+    height: 50px;
+    margin-bottom: 2em;
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+
+  .bubbleAmount2 p {
+    font-size:15px;
   }
 
   .bubble3 { 
     grid-area: bubble3; 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 50px 50px 50px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 0px 0px;
     grid-template-areas:
       "bubbleTitle3"
@@ -406,14 +470,51 @@ p {
 
   .bubbleTitle3 {
     grid-area: bubbleTitle3;
+    height: 50px;
+    margin-bottom: -1em;
+    margin-top: -1em;
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+
+  .bubbleTitle3 p {
+    font-size:25px;
   }
 
   .bubbleMessage3 {
     grid-area: bubbleMessage;
+    height: 50px;
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+
+  .bubbleMessage3 p {
+    font-size:20px;
+  }
+
+  .bubbleExtra3 {
+    grid-area: bubbleExtra3;
+    height: 50px;
+    margin-bottom: -1em;
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+
+  .bubbleExtra3 p {
+    font-size: 15px;
+    color: white;
   }
 
   .bubbleAmount3 {
     grid-area: bubbleAmount3;
+    height: 50px;
+    margin-bottom: 2em;
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+
+  .bubbleAmount3 p {
+    font-size:15px;
   }
 
 
@@ -453,7 +554,7 @@ p {
 }
 
 
-.Donate-Button2 button {
+.Donate-Button2-button {
   font-size: 100%;
   width: 70%;
   height: 80%;
@@ -471,6 +572,7 @@ p {
 
 .Donation-text { 
   grid-area: Donation-text; 
+  margin-bottom: 3em;
 }
 
 .Donation-text p {
@@ -544,6 +646,7 @@ p {
 .Rescue-Log { 
   grid-area: Rescue-Log; 
   text-align: center;
+  margin-top: 3em;
 }
 
 .Log1 { 
@@ -585,6 +688,7 @@ p {
   grid-area: Log1Text; 
   text-align: center;
   padding: 1em;
+  margin-bottom: 3em;
 }
 
 .Log1Text p {
@@ -596,6 +700,7 @@ p {
   grid-area: Log2Text; 
   text-align: center;
   padding: 1em;
+  margin-bottom: 3em;
 }
 
 .Log2Text p {
@@ -607,6 +712,7 @@ p {
   grid-area: Log3Text; 
   text-align: center;
   padding: 1em;
+  margin-bottom: 3em;
 }
 
 .Log3Text p {
@@ -628,7 +734,6 @@ p {
   grid-template-areas:
     "Report-an-Injured-Animal Report-an-Injured-Animal Report-an-Injured-Animal"
     "ReportText ReportText Image";
-    /* "ReportText ReportText Image"; */
   grid-area: Section-3;
   background-color: #ECC8AF;
 }
@@ -637,9 +742,10 @@ p {
   grid-area: Report-an-Injured-Animal; 
   text-align: center;
   margin:1em;
+  margin-top: 3em;
 }
 
-.section3-report-button {
+.Report-an-Injured-Animal-button {
   font-size: 200%;
   background-color: #495867;
   border: none;
@@ -653,12 +759,14 @@ p {
   grid-area: ReportText; 
   text-align:center;
   padding: 1em;
+  margin-bottom: 3em;
 }
 
 
 .Image { 
   grid-area: Image; 
   text-align: center;
+  margin-bottom: 3em;
 }
 
 .Image img {
@@ -688,9 +796,10 @@ p {
   grid-area: Our-Campaigns; 
   text-align: center;
   margin:1em;
+  margin-top: 3em;
 }
 
-.section4-campaigns-button {
+.Our-Campaigns-button {
   font-size: 200%;
   background-color: #495867;
   border: none;
@@ -703,6 +812,7 @@ p {
 .Campaign-Image { 
   grid-area: Campaign-Image; 
   text-align: center;
+  margin-bottom: 3em;
 }
 
 .Campaign-Image img {
@@ -715,6 +825,7 @@ p {
   grid-area: Campaign-Text;
   text-align:center;
   padding: 1em; 
+  margin-bottom: 3em;
 }
 
 /* ________________________________________________________________________________ */
@@ -724,7 +835,7 @@ p {
 /* ________________________________________________________________________________ */
 .Section-5 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 0.5fr 1fr;
   grid-template-rows: auto auto 1fr;
   gap: 0px 0px;
   grid-template-areas:
@@ -739,15 +850,16 @@ p {
   grid-area: Volunteer-Title; 
   text-align:center;
   margin:1em;
+  margin-top: 3em;
 }
 
-.section5-volunteer-button {
+.Volunteer-Title-button {
   font-size: 200%;
   background-color: #495867;
   border: none;
   padding: 8px 8px;
   text-align: center;
-  border-radius: 25px;
+  border-radius: 20px;
   color: white;
 }
 
@@ -757,13 +869,13 @@ p {
   text-align: center;
 }
 
-.section5-becomeVolunteer-button {
+.Become-Volunteer-button {
   font-size: 200%;
   background-color: #495867;
   border: none;
   padding: 8px 8px;
   text-align: center;
-  border-radius: 25px;
+  border-radius: 20px;
   color: white;
 }
 
@@ -773,32 +885,36 @@ p {
   text-align: center;
 }
 
-.section5-becomeCarer-button {
+.Become-Carer-button {
   font-size: 200%;
   background-color: #495867;
   border: none;
   padding: 8px 8px;
   text-align: center;
-  border-radius: 25px;
+  border-radius: 20px;
   color: white;
 }
 
 .Volunteer-Image { 
   grid-area: Volunteer-Image; 
+  text-align: center;
 }
 
 .Volunteer-Image img {
   width:100%;
   border-radius: 25px;
+  max-width: 300px;
 }
 
 .Volunteer-Image2 { 
   grid-area: Volunteer-Image2; 
+  text-align: center;
 }
 
 .Volunteer-Image2 img {
   width:100%;
-  border-radius: 25px;
+  border-radius: 20px;
+  max-width: 300px;
 }
 
 
@@ -849,6 +965,7 @@ p {
   grid-area: Info-text;
   padding: 1em;
   margin-left: 2em;
+  margin-bottom: 3em;
 }
 
 /* ________________________________________________________________________________ */
@@ -874,15 +991,13 @@ p {
 
 .Submit {
   grid-area: Submit;
-  background-color:aqua;
   text-align: center;
   margin-top: 5em;
   margin-bottom: 10em;
   margin-left: 5em;
 }
 
-.Submit button {
-  
+.Submit-button {
   font-size: 100%;
   width: 70%;
   height: 80%;
@@ -890,7 +1005,7 @@ p {
   border: none;
   padding: 8px 8px;
   text-align: center;
-  border-radius: 25px;
+  border-radius: 20px;
   color: white;
   margin: 0 auto;
   position: relative;
@@ -928,13 +1043,11 @@ input {
 .Form-Title {
   grid-area: Form-Title;
   text-align: center;
-
 }
 
 .Form-Details {
   grid-area: Form-Details;
   margin-left: 5em;
-  
 }
 
 
@@ -947,7 +1060,6 @@ input {
   grid-area: Form-Location;
   margin-left: 5em;
 }
-
 
 .Form-Location-Box {
   grid-area: Form-Location-Box;
@@ -1016,7 +1128,7 @@ ul {
 .Landcare, .Wildlife, .AWC, .Currumbin, .AussieArk, .Water4Wild {
   width: 70%;
   height: 80%;
-  border-radius: 25px;
+  border-radius: 20px;
   padding-left: 0.5em;
   padding-right: 0.5em;
   padding-top: 1em;
@@ -1116,6 +1228,7 @@ ul {
     "Volunteer-Title  Volunteer-Title "
     "Rescuer-Title    Carer-Title     "
     "Rescuer          Carer           ";
+
 }
 
 
@@ -1140,10 +1253,12 @@ ul {
 
 .Rescuer {
   grid-area: Rescuer;
+  margin-bottom: 3em;
 }
 
 .Carer {
   grid-area: Carer;
+  margin-bottom: 3em;
 }
 
 
@@ -1167,6 +1282,7 @@ ul {
 
 .Donate-Title {
   grid-area: Donate-Title;
+  text-align: center;
 }
 
 .Donate-Info {
@@ -1296,9 +1412,10 @@ ul {
 .Donate-donate {
   margin-top: 8em;
   grid-area: Donate-donate;
+  margin-bottom: 5em;
 }
 
-.Donate-donate button {
+.Donate-donate-button {
   font-size: 100%;
   width: 70%;
   height: 30%;
@@ -1306,7 +1423,7 @@ ul {
   border: none;
   padding: 8px 8px;
   text-align: center;
-  border-radius: 25px;
+  border-radius: 20px;
   color: white;
   margin: 0 auto;
   position: relative;
@@ -1330,22 +1447,114 @@ input {
 }
 
 
-
-
-
-
-
-
-
-
-
-
 /* ________________________________________________________________________________ */
 
 /* Media Queries */
 
 /* ________________________________________________________________________________ */
+
+
+@media screen and (max-width: 1346px) {
+
+
+  .bubbleTitle1 p {
+    font-size:20px;
+  }
+
+
+  .bubbleMessage1 p {
+    font-size:15px;
+  }
+
+
+
+  .bubbleTitle2 p {
+    font-size:20px;
+  }
+
+
+  .bubbleMessage2 p {
+    font-size:15px;
+  }
+
+
+  .bubbleTitle3 p {
+    font-size:20px;
+  }
+
+
+  .bubbleMessage3 p {
+    font-size:15px;
+  }
+
+
+}
+
+
+
+@media screen and (max-width: 550px) {
+
+/* ________________________________________________________________________________ */
+
+/* Page1 section1 bubbles */
+
+/* ________________________________________________________________________________ */
+
+  .Donation-bubbles {
+    text-align: center;
+    display: block;
+  }
+
+
+
+  .bubble1, .bubble2, bubble3 {
+    margin-bottom: 3em;
+  }
+
+  .bubbleTitle1 p {
+    font-size:25px;
+  }
+
+
+  .bubbleMessage1 p {
+    font-size:20px;
+  }
+
+
+
+  .bubbleTitle2 p {
+    font-size:25px;
+  }
+
+
+  .bubbleMessage2 p {
+    font-size:20px;
+  }
+
+
+
+  .bubbleTitle3 p {
+    font-size:25px;
+  }
+
+
+  .bubbleMessage3 p {
+    font-size:20px;
+  }
+
+
+
+}
+
+
 @media screen and (max-width: 644px) {
+
+/* ________________________________________________________________________________ */
+
+/* Page1 nav */
+
+/* ________________________________________________________________________________ */
+
   .Nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -1391,10 +1600,9 @@ input {
 
   .Report-Button { 
     grid-area: Report-Button;
-    background-color: lightpink;
   }
 
-  .Report-Button button {
+  .Report-Button-button {
     background-color: #495867;
     border: none;
     padding: 8px 8px;
@@ -1406,45 +1614,41 @@ input {
   .CampaignsButton { 
     grid-area: CampaignsButton;
     text-align: right;
-    background-color: darkgray;
   }
 
-  .CampaignsButton button {
+  .CampaignsButton-button {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
   }
 
   .Volunteer-Button {
-    background-color:aquamarine;
     margin-left: 0px;
     margin-right: 0px;
   }
 
-  .Volunteer-Button button {
+  .Volunteer-Button-button {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
   }
 
   .contact-Button {
     text-align: center;
-    background-color: aqua;
     margin-left: 0px;
     margin-right: 0px;
   }
 
-  .contact-Button button {
+  .contact-Button-button {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
   }
 
   .donate-Button {
     text-align: right;
-    background-color:chartreuse;
     margin-left: 0px;
     margin-right: 0px;
   }
 
-  .donate-Button button {
+  .donate-Button-button {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
   }
@@ -1452,62 +1656,7 @@ input {
 
 }
 
-@media screen and (max-width: 1025px) {
-
-/* ________________________________________________________________________________ */
-
-/* page1 */
-
-/* ________________________________________________________________________________ */
-
-
-  /* ________________________________________________________________________________ */
-
-  /* page1 Nav */
-
-  /* ________________________________________________________________________________ */
-  
-
-
-
-
-  /* ________________________________________________________________________________ */
-
-  /* page1 Display Image */
-
-  /* ________________________________________________________________________________ */
-
-
-  .Image1 { 
-    display: none;
-  }
-
-  .Image2 { 
-    display: none;
-  }
-
-.Text { 
-  display: block;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: auto;
-  margin-right: auto;
-  
-}
-
-.Text > h1 {
-  text-align: center; 
-}
-
-
-
-
-
-
-
-
-
-
+@media screen and (max-width: 1198px) {
 
   /* ________________________________________________________________________________ */
 
@@ -1550,22 +1699,6 @@ input {
     font-size: 200%;
   }
 
-  .bubble1, .bubble2, .bubble3 {
-    background-color: white;
-    width: 70%;
-    height: 80%;
-    border-radius: 25px;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    text-align: center; 
-    display: inline-block;
-  }
 
 
   .Donate-Button2 { 
@@ -1580,7 +1713,7 @@ input {
     border: none;
     padding: 8px 8px;
     text-align: center;
-    border-radius: 25px;
+    border-radius: 20px;
     color: white;
     margin: 0 auto;
     position: relative;
@@ -1602,7 +1735,6 @@ input {
   }
 
 
-
   .Picture1 { 
     display: none;
   }
@@ -1612,6 +1744,52 @@ input {
   .Picture3 { 
     display: none;
   }
+
+
+
+}
+
+
+@media screen and (max-width: 1025px) {
+
+/* ________________________________________________________________________________ */
+
+/* page1 */
+
+/* ________________________________________________________________________________ */
+
+
+
+  /* ________________________________________________________________________________ */
+
+  /* page1 Display Image */
+
+  /* ________________________________________________________________________________ */
+
+
+  .Image1 { 
+    display: none;
+  }
+
+  .Image2 { 
+    display: none;
+  }
+
+  .Text { 
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+
+  .Text > h1 {
+    text-align: center; 
+  }
+
+
+
 
 
   /* ________________________________________________________________________________ */
@@ -1649,7 +1827,7 @@ input {
 
   .Log2 img {
     width:100%;
-    border-radius: 25px;
+    border-radius: 20px;
   }
 
   .Log3 { 
@@ -1775,6 +1953,10 @@ input {
     display: block;
   }
 
+  .Submit {
+  margin-left: 0em;
+  }
+
   /* ________________________________________________________________________________ */
 
   /* page3 */
@@ -1825,14 +2007,6 @@ input {
   .grid-container-donate {
     display: block;
   }
-
-
-
-  /* ________________________________________________________________________________ */
-
-  /* Media Query Big screen */
-
-  /* ________________________________________________________________________________ */
 
 
 
